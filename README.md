@@ -127,4 +127,31 @@ Write a function with one `[{country: string}]`(list of object) argument. Return
 
 Call it `countCountries`
 
+🎉 First 20 down, go take a walk!
 
+## ❌ 21: highestNumber
+Write a function with one `[number]` argument. Return the highest number.
+
+Call it `highestNumber`
+
+## ❌ 22: average
+Write a function with one `[number]` argument. Return the average.
+
+Call it `average`
+
+## ❌ 23: mode
+Write a function with one `[number]` argument. Return the mode (most frequent value).
+
+Call it `mode`
+
+## ❌ 24: reverse
+Write a function with one `string` argument. Return the reversed string.
+
+Call it `reverse`
+
+## ❌ 25: palindrome
+Write a function with one `string` argument. Return true or false wether this string is a palindrome.
+
+> A palindrome is a string that stays the same when you reverse it. Like 'Bob' or 'Racecar'.
+
+Call it `palindrome`
