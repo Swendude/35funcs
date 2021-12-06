@@ -16,8 +16,8 @@ Call it `double2`.
 
 ## ❌ 03: double 3
 
-Write a regular function with a `number` argument that returns 
-double the first argument. 
+Write a regular function with two `number` arguments that returns 
+double the largest argument. 
 
 Call it `double3`.
 
