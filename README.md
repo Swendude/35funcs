@@ -96,12 +96,6 @@ Write a function with two `string` arguments. Split both strings in halves and r
 
 Call it `splitCombine`.
 
-## ❌ 15: splitCombine
-
-Write a function with two `string` arguments. Split both strings in half and recombine the halves. Return the longest results of the two combinations
-
-Call it `splitCombine`.
-
 ## ❌ 16: getName
 Write a function with one `{name: string}`(object) argument. Return the name property.
 
