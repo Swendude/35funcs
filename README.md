@@ -155,3 +155,37 @@ Write a function with one `string` argument. Return true or false wether this st
 > A palindrome is a string that stays the same when you reverse it. Like 'Bob' or 'Racecar'.
 
 Call it `palindrome`
+
+## ❌ 26: pyramid
+Write a function with one `number` argument. Have it log a pyramid of that size. For example:
+`pyramid(4)` shoud log:
+
+```javascript
+*
+* *
+* * *
+* * * *
+```
+Call it `pyramid`
+
+## ❌ 27: array_intersect
+Write a function that takes two `[number]` arguments and return an array that contains all numers that are in both arrays.
+
+Call it `array_intersect`
+
+## ❌ 28: key_intersect
+Write a function that takes two `{key:value} (objects)` arguments and return an array that contains all the keys that are in both objects.
+
+Call it `key_intersect`
+
+## ❌ 29: value_intersect
+Write a function that takes two `{key:value} (objects)` arguments and return an array that contains all the values that are in both objects.
+
+Call it `value_intersect`
+
+## ❌ 30: intersect
+Write a function that takes two `{key:value} (objects)` arguments and return an array that contains all the key and value pairs that are in both objects.
+
+Call it `intersect`
+
+

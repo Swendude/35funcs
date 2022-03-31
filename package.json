@@ -1,14 +1,21 @@
 {
-  "name": "100funcs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^27.3.1"
-  }
+    "name": "100funcs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --silent=false --json >> testresults.json"
+    },
+    "author": "",
+    "license": "ISC",
+    "jest": {
+        "reporters": [
+            "default"
+
+        ]
+    },
+    "dependencies": {
+        "@alex_neo/jest-expect-message": "^1.0.5",
+        "jest": "^27.3.1"
+    }
 }
