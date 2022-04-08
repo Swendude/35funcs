@@ -29,4 +29,10 @@ jobs:
     - run: npm i
     - run: node config/generateMD.js
     - name: Commit & push back
-      uses: ludeeus/action-push@0.0.1
+      uses: actions-go/push@v1
+      with:
+        author-email: teachers@codaisseur.com
+        author-name: teacher-bot
+        commit-files: README.md
+        commit-message: Checked index.js
+        
