@@ -28,6 +28,7 @@ jobs:
         cache: 'npm'
     - run: npm i
     - run: node config/generateMD.js
+    - run: git add README.md
     - name: Commit & push back
       uses: actions-go/push@v1
       with:
