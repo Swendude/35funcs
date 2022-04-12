@@ -1,17 +1,17 @@
 ## ✅ 0: double1
 Write a function with one `number` argument that returns double the argument.
 
-## 🔴 1: double2
+## ✅ 1: double2
 Write a function with two `number` arguments that returns double the first argument.
 
-## 🔴 2: double3
+## ✅ 2: double3
 Write a function with two `number` arguments that returns double the largest argument.
 
-## 🔴 3: repeat
-Write a function with a `string` argument and a `number` argument that repeates the string from the first argument but repeated the amount of times equal to the second argument.
+## ✅ 3: repeat
+Write a function with a `string` argument and a `number` argument that repeates the string from the first argument but repeated the amount of times equal to the second argument. If the second number is negative, return an empty string.
 
-## 🔴 4: batman
-Write a function without any arguments. Have it return the string `'na'` repeated 10 times followed by the string `'batman!'`. Use the `repeat` function you used before to accomplish this.
+## ✅ 4: batman
+Write a function without any arguments. Have it return the string `'na'` repeated 10 times followed by the string `' batman!'`. Use the `repeat` function you used before to accomplish this.
 
 ## 🔴 5: max
 Write a function with two `number` arguments. Have it return the largest number of the two.

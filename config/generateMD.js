@@ -1,23 +1,27 @@
 const challenges = require("./challenges.json");
+const chalk = require("chalk");
 const fs = require("fs");
-var assert = require("assert");
+
+let LOG_TO_CONSOLE = false;
 
 const assertionErrors = (_name, asserts) => {
   const fn = require(`${__dirname}/../index.js`)[_name];
   let errors = [];
   if (!fn) {
-    return [`Function \`${_name}\` not found in index.js`];
+    errors.push(
+      `Function \`${_name}\` not found in index.js, did you export it?`
+    );
   } else {
     asserts.forEach((assert) => {
-      const actualOutput = fn(assert.input);
+      const actualOutput = fn(...assert.input);
       if (actualOutput !== assert.output) {
         errors.push(
           `input: ${assert.input}, expected: ${assert.output}, actual: ${actualOutput}`
         );
       }
     });
-    return errors.length === 0 ? null : errors;
   }
+  return errors.length === 0 ? null : errors;
 };
 
 const challengeTemplate = (
@@ -32,6 +36,14 @@ const challengeTemplate = (
   let errors = null;
   if (assertions) {
     errors = assertionErrors(_name, assertions);
+    if (LOG_TO_CONSOLE) {
+      if (errors) {
+        console.log("❌ ERROR:", chalk.bold.underline(_name));
+        errors.forEach((error) => console.log("\t" + chalk.red(error)));
+      } else {
+        console.log("✅ Check:", chalk.bold.underline(_name));
+      }
+    }
     if (!errors) {
       statusSymbol = "✅";
     } else {
@@ -59,6 +71,10 @@ const challengeTemplate = (
   }
   return MD;
 };
+
+if (process.argv.slice(2).includes("--clg")) {
+  LOG_TO_CONSOLE = true;
+}
 
 const totalMD = challenges
   .map((challenge, ix) =>

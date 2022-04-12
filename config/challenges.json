@@ -3,26 +3,43 @@
     "name": "double1",
     "description": "Write a function with one `number` argument that returns double the argument.",
     "assertions": [
-      { "input": 3, "output": 6 },
-      { "input": 0, "output": 0 },
-      { "input": -42, "output": -84 }
+      { "input": [3], "output": 6 },
+      { "input": [0], "output": 0 },
+      { "input": [-42], "output": -84 }
     ]
   },
   {
     "name": "double2",
-    "description": "Write a function with two `number` arguments that returns double the first argument."
+    "description": "Write a function with two `number` arguments that returns double the first argument.",
+    "assertions": [
+      { "input": [3, 8], "output": 6 },
+      { "input": [0, 5], "output": 0 },
+      { "input": [-42, 22], "output": -84 }
+    ]
   },
   {
     "name": "double3",
-    "description": "Write a function with two `number` arguments that returns double the largest argument."
+    "description": "Write a function with two `number` arguments that returns double the largest argument.",
+    "assertions": [
+      { "input": [3, 8], "output": 16 },
+      { "input": [5, 10], "output": 20 },
+      { "input": [-42, 22], "output": 44 },
+      { "input": [-42, -22], "output": -44 }
+    ]
   },
   {
     "name": "repeat",
-    "description": "Write a function with a `string` argument and a `number` argument that repeates the string from the first argument but repeated the amount of times equal to the second argument."
+    "description": "Write a function with a `string` argument and a `number` argument that repeates the string from the first argument but repeated the amount of times equal to the second argument. If the second number is negative, return an empty string.",
+    "assertions": [
+      { "input": ["a", 5], "output": "aaaaa" },
+      { "input": ["aloha", 2], "output": "alohaaloha" },
+      { "input": ["b", -1], "output": "" }
+    ]
   },
   {
     "name": "batman",
-    "description": "Write a function without any arguments. Have it return the string `'na'` repeated 10 times followed by the string `'batman!'`. Use the `repeat` function you used before to accomplish this."
+    "description": "Write a function without any arguments. Have it return the string `'na'` repeated 10 times followed by the string `' batman!'`. Use the `repeat` function you used before to accomplish this.",
+    "assertions": [{ "input": [], "output": "nananananananananana batman" }]
   },
   {
     "name": "max",

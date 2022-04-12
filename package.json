@@ -1,21 +1,22 @@
 {
-    "name": "100funcs",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "jest --silent=false --json >> testresults.json"
-    },
-    "author": "",
-    "license": "ISC",
-    "jest": {
-        "reporters": [
-            "default"
-
-        ]
-    },
-    "dependencies": {
-        "@alex_neo/jest-expect-message": "^1.0.5",
-        "jest": "^27.3.1"
-    }
+  "name": "100funcs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./config/generateMD.js --clg",
+    "generate": "node ./config/generateMD.js"
+  },
+  "author": "Swen Mulderij (@Swendude)",
+  "license": "ISC",
+  "jest": {
+    "reporters": [
+      "default"
+    ]
+  },
+  "dependencies": {
+    "@alex_neo/jest-expect-message": "^1.0.5",
+    "chalk": "^2.4.1",
+    "jest": "^27.3.1"
+  }
 }
