@@ -19,18 +19,20 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm i
-      - run: node run generate
-      - name: Commit & push back
-        uses: actions-go/push@v1
-        with:
-          author-email: teachers@codaisseur.com
-          author-name: teacher-bot
-          commit-message: Checked index.js
-          fail-if-empty: true
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm i
+    - run: node config/generateMD.js
+    - run: git add README.md
+    - name: Commit & push back
+      uses: actions-go/push@v1
+      with:
+        author-email: teachers@codaisseur.com
+        author-name: teacher-bot
+        commit-message: Checked index.js
+        fail-if-empty: true
+        
