@@ -25,18 +25,16 @@ jobs:
         cache: 'npm'
     - run: npm i
     - run: node config/generateMD.js
-  sync:
-    needs: build
-    steps:
-      - run: git add README.md
-      - run: git status
-      - name: Commit & push back
-        uses: actions-go/push@v1
-        with:
-          author-email: teachers@codaisseur.com
-          author-name: teacher-bot
-          remote: origin
-          create-commit: true
-          commit-message: '[Auto]Checked index.js'
-          fail-if-empty: false
-          
+    - run: git add README.md
+    - run: git status
+    - run: git add README.md
+    - name: Commit & push back
+      uses: actions-go/push@v1
+      with:
+        author-email: teachers@codaisseur.com
+        author-name: teacher-bot
+        remote: origin
+        create-commit: true
+        commit-message: '[Auto]Checked index.js'
+        fail-if-empty: false
+        
