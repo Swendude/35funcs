@@ -33,6 +33,6 @@ jobs:
       with:
         author-email: teachers@codaisseur.com
         author-name: teacher-bot
-        commit-message: Checked index.js
-        fail-if-empty: true
+        commit-message: '[Auto]Checked index.js'
+        fail-if-empty: false
         
