@@ -93,20 +93,33 @@
     "description": "Write a function with a single `array of numbers` argument. Return an array of all the numbers in this array that are even.",
     "assertions": [
       { "input": [0, 2, 4, 6, 8, 10], "output": [0, 2, 4, 6, 8, 10] },
-      { "input": [0, 2, 4, 6, 8, 10, 33], "output": [0, 2, 4, 6, 8, 10] }
+      { "input": [0, 2, 4, 6, 8, 10, 33], "output": [0, 2, 4, 6, 8, 10] },
+      { "input": [1, 3, 4, 6, 8, 10, 33], "output": [4] }
     ]
   },
   {
     "name": "multiplyArray",
-    "description": "Write a function with a single `array of numbers` argument. Return the result of multiplying all the numbers."
+    "description": "Write a function with a single `array of numbers` argument. Return the result of multiplying all the numbers. If the input contains just 1 number, return that number.",
+    "assertions": [
+      { "input": [0, 2, 4], "output": 0 },
+      { "input": [-1, 4, 8], "output": -32 },
+      { "input": [8], "output": [8] }
+    ]
   },
   {
     "name": "divideArray",
-    "description": "Write a function with a single `array of numbers` argument. Return the result of dividing the number from left to right. So the first number gets divided by the second and the result of that gets divided by the third (and so on..)."
+    "description": "Write a function with a single `array of numbers` argument. Return the result of dividing the number from left to right. So the first number gets divided by the second and the result of that gets divided by the third (and so on..). If the array contains a zero, return zero. If the array contains just one number, return that number.",
+    "assertions": [
+      { "input": [0, 2, 4], "output": 0 },
+      { "input": [16, 8, 2], "output": 1 },
+      { "input": [16, -8, 2], "output": -1 },
+      { "input": [8], "output": [8] }
+    ]
   },
   {
     "name": "splitCombine",
-    "description": "Write a function with two `string` arguments. Split both strings in halves and recombine the halves. Return the longest results of the two combinations (or the first one if both have the same length)."
+    "description": "Write a function with two `string` arguments. Split both strings in halves and recombine the halves. Return the longest results of the two combinations (or the first one if both have the same length).",
+    "assertions": [{ "input": ["babe", "bibo"], "output": "babo" }]
   },
   {
     "name": "getName",
