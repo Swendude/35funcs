@@ -34,6 +34,7 @@ jobs:
         author-email: teachers@codaisseur.com
         author-name: teacher-bot
         remote: origin
+        create-commit: true
         commit-message: '[Auto]Checked index.js'
         fail-if-empty: false
         
