@@ -39,34 +39,62 @@
   {
     "name": "batman",
     "description": "Write a function without any arguments. Have it return the string `'na'` repeated 10 times followed by the string `' batman!'`. Use the `repeat` function you used before to accomplish this.",
-    "assertions": [{ "input": [], "output": "nananananananananana batman" }]
+    "assertions": [{ "input": null, "output": "nananananananananana batman" }]
   },
   {
     "name": "max",
-    "description": "Write a function with two `number` arguments. Have it return the largest number of the two."
+    "description": "Write a function with two `number` arguments. Have it return the largest number of the two.",
+    "assertions": [
+      { "input": [10, 5], "output": 10 },
+      { "input": [-10, 50], "output": 50 },
+      { "input": [-10, -50], "output": -10 }
+    ]
   },
   {
     "name": "maxDivide",
-    "description": "Write a function with two `number` arguments. Have it return the smallest number of the two divided by the largest number."
+    "description": "Write a function with two `number` arguments. Have it return the smallest number of the two divided by the largest number.",
+    "assertions": [
+      { "input": [10, 5], "output": 0.5 },
+      { "input": [-10, 50], "output": -0.2 },
+      { "input": [-10, -50], "output": 0.2 }
+    ]
   },
   {
     "name": "maxStr",
-    "description": "Write a function with two `string` arguments. Have it return the longest string."
+    "description": "Write a function with two `string` arguments. Have it return the longest string.",
+    "assertions": [
+      { "input": ["aaaaa", "a"], "output": "aaaaa" },
+      { "input": ["aa", "b"], "output": "aa" },
+      { "input": ["aa", "bb"], "output": "aa" }
+    ]
   },
   {
     "name": "even",
     "description": "Write a function with a single `number` argument. Return a boolean that indicated wether this number is even.",
     "tips": [
       "use the `%`(remainder) operator to determine if something is divisible by something else. Read about it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)."
+    ],
+    "assertions": [
+      { "input": [12], "output": true },
+      { "input": [13], "output": false },
+      { "input": [-2], "output": true }
     ]
   },
   {
     "name": "evenBelow",
-    "description": "Write a function with a single `number` argument. Return an array of all the numbers lower than this argument that are even."
+    "description": "Write a function with a single `number` argument. Return an array of all the numbers lower than this argument that are even.",
+    "assertions": [
+      { "input": [12], "output": [0, 2, 4, 6, 8, 10] },
+      { "input": [-20], "output": [] }
+    ]
   },
   {
     "name": "evenIn",
-    "description": "Write a function with a single `array of numbers` argument. Return an array of all the numbers in this array that are even."
+    "description": "Write a function with a single `array of numbers` argument. Return an array of all the numbers in this array that are even.",
+    "assertions": [
+      { "input": [0, 2, 4, 6, 8, 10], "output": [0, 2, 4, 6, 8, 10] },
+      { "input": [0, 2, 4, 6, 8, 10, 33], "output": [0, 2, 4, 6, 8, 10] }
+    ]
   },
   {
     "name": "multiplyArray",

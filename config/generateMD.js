@@ -13,10 +13,18 @@ const assertionErrors = (_name, asserts) => {
     );
   } else {
     asserts.forEach((assert) => {
-      const actualOutput = fn(...assert.input);
+      let actualOutput = null;
+      if (assert.input !== null) {
+        actualOutput = fn(...assert.input);
+      } else {
+        actualOutput = fn();
+      }
+
       if (actualOutput !== assert.output) {
         errors.push(
-          `input: ${assert.input}, expected: ${assert.output}, actual: ${actualOutput}`
+          `INPUT: ${assert.input || "None"} \n\tEXPECTED: ${
+            assert.output
+          }\n\tACTUAL: ${actualOutput}`
         );
       }
     });
@@ -39,7 +47,7 @@ const challengeTemplate = (
     if (LOG_TO_CONSOLE) {
       if (errors) {
         console.log("❌ ERROR:", chalk.bold.underline(_name));
-        errors.forEach((error) => console.log("\t" + chalk.red(error)));
+        errors.forEach((error) => console.log("\t" + chalk.red(error) + "\n"));
       } else {
         console.log("✅ Check:", chalk.bold.underline(_name));
       }
