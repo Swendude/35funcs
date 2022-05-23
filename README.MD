@@ -53,14 +53,20 @@ Write a function with a single `array of numbers` argument. Return an array of a
 ### ⚠️ Errors:
 	- Function `evenIn` not found in index.js, did you export it?
 
-## 🔴 11: multiplyArray
-Write a function with a single `array of numbers` argument. Return the result of multiplying all the numbers.
+## ❌ 11: multiplyArray
+Write a function with a single `array of numbers` argument. Return the result of multiplying all the numbers. If the input contains just 1 number, return that number.
+### ⚠️ Errors:
+	- Function `multiplyArray` not found in index.js, did you export it?
 
-## 🔴 12: divideArray
-Write a function with a single `array of numbers` argument. Return the result of dividing the number from left to right. So the first number gets divided by the second and the result of that gets divided by the third (and so on..).
+## ❌ 12: divideArray
+Write a function with a single `array of numbers` argument. Return the result of dividing the number from left to right. So the first number gets divided by the second and the result of that gets divided by the third (and so on..). If the array contains a zero, return zero. If the array contains just one number, return that number.
+### ⚠️ Errors:
+	- Function `divideArray` not found in index.js, did you export it?
 
-## 🔴 13: splitCombine
+## ❌ 13: splitCombine
 Write a function with two `string` arguments. Split both strings in halves and recombine the halves. Return the longest results of the two combinations (or the first one if both have the same length).
+### ⚠️ Errors:
+	- Function `splitCombine` not found in index.js, did you export it?
 
 ## 🔴 14: getName
 Write a function with one `{name: string}` argument. Return the name property.
