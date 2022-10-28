@@ -123,27 +123,87 @@
   },
   {
     "name": "getName",
-    "description": "Write a function with one `{name: string}` argument. Return the name property."
+    "description": "Write a function with one `{name: string}` argument. Return the name property.",
+    "assertions": [
+      { "input": { "name": "Blibo" }, "output": "blibo" },
+      { "input": { "name": "Blobao", "age": 25 }, "output": "Blobao" }
+    ]
   },
   {
     "name": "getNames",
-    "description": "Write a function with one `[{name: string}]`(list of object) argument. Return an array with all the name properties."
+    "description": "Write a function with one `[{name: string}]`(list of object) argument. Return an array with all the name properties.",
+    "assertions": [
+      { "input": [{ "name": "Blibo" }], "output": ["blibo"] },
+      {
+        "input": [{ "name": "Blibo" }, { "name": "Blobao", "age": 25 }],
+        "output": ["Blibo", "Blobao"]
+      }
+    ]
   },
   {
     "name": "combineName",
-    "description": "Write a function with one `[{firstname: string, lastname: string}]`(list of object) argument. Return an array with all the full names (both the first and the last name as a single string with a space in between them)."
+    "description": "Write a function with one `[{firstname: string, lastname: string}]`(list of object) argument. Return an array with all the full names (both the first and the last name as a single string with a space in between them).",
+    "assertions": [
+      {
+        "input": [
+          { "firstname": "Blibo", "lastname": "Blaggins" },
+          { "name": "Blobao", "lastname": "Bloaggins", "age": 25 }
+        ],
+        "output": ["Blibo Blaggins", "Blobao Bloaggins"]
+      }
+    ]
   },
   {
     "name": "uniqueCountries",
-    "description": "Write a function with one `[{country: string}]`(list of object) argument. Return an array with every unique country value in the input array."
+    "description": "Write a function with one `[{country: string}]`(list of object) argument. Return an array with every unique country value in the input array.",
+    "assertions": [
+      {
+        "input": [
+          { "country": "The Netherlands" },
+          { "country": "Belgium" },
+          { "country": "Luxembourg" }
+        ],
+        "output": ["The Netherlands", "Belgium", "Luxembourg"]
+      },
+      {
+        "input": [
+          { "country": "The Netherlands" },
+          { "country": "Belgium" },
+          { "country": "Luxembourg" },
+          { "country": "Belgium" }
+        ],
+        "output": ["The Netherlands", "Belgium", "Luxembourg"]
+      },
+      {
+        "input": [],
+        "output": []
+      }
+    ]
   },
   {
     "name": "countCountries",
-    "description": "Write a function with one `[{country: string}]`(list of object) argument. Return an object with all the unique values as keys and the amount of occurences as value."
+    "description": "Write a function with one `[{country: string}]`(list of object) argument. Return an object with all the unique values as keys and the amount of occurences as value.",
+    "assertions": [
+      {
+        "input": [
+          { "country": "The Netherlands" },
+          { "country": "Belgium" },
+          { "country": "Luxembourg" },
+          { "country": "Belgium" },
+          { "country": "Luxembourg" },
+          { "country": "Luxembourg" }
+        ],
+        "output": { "The Netherlands": 1, "Belgium": 2, "Luxembourg": 3 }
+      }
+    ]
   },
   {
     "name": "highestNumber",
-    "description": "Write a function with one `[number]` argument. Return the highest number."
+    "description": "Write a function with one `[number]` argument. Return the highest number.",
+    "assertions": [
+      { "input": [5], "output": 5 },
+      { "input": [5, -5, 10, -100], "output": 20 }
+    ]
   },
   {
     "name": "average",
