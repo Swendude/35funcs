@@ -17,7 +17,7 @@ Write a function with a `string` argument and a `number` argument that repeates 
 	- Function `repeat` not found in index.js, did you export it?
 
 ## ❌ 4: batman
-Write a function without any arguments. Have it return the string `'na'` repeated 10 times followed by the string `' batman!'`. Use the `repeat` function you used before to accomplish this.
+Write a function without any arguments. Have it return the string `'na'` repeated 10 times followed by the string `' batman'`. Use the `repeat` function you used before to accomplish this.
 ### ⚠️ Errors:
 	- Function `batman` not found in index.js, did you export it?
 
