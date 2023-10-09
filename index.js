@@ -5,4 +5,3 @@ function double1(first) {
 }
 
 module.exports = { double1 };
- 
