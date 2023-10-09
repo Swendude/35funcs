@@ -20,7 +20,7 @@ const assertionErrors = (_name, asserts) => {
         actualOutput = fn();
       }
 
-      if (actualOutput !== assert.output) {
+      if (JSON.stringify(actualOutput) !== JSON.stringify(assert.output)) {
         errors.push(
           `INPUT: ${assert.input || "None"} \n\tEXPECTED: ${
             assert.output
